@@ -20,4 +20,5 @@ if __name__ == "__main__":
         shutdown_wsl()
     else:
         ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, __file__, None, 1)
-# TODO make it executable
+# TODO make it executable // done
+# TODO fix issue with not asking priveleges
