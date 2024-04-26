@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# dir
+mkdir lab_assets
+
+# cd
+cd lab_assets
+
 # Clone the repository
 git clone https://github.com/tiann/eadb
 
