@@ -1,0 +1,1 @@
+/run local c,s={0,1,2,3,4,5,6,7,148},0;for i=1,9 do s=s+C_CurrencyInfo.GetCurrencyInfo(2853+c[i]).quantity end print("Total threads: "..s)
