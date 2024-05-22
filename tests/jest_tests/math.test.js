@@ -1,16 +1,17 @@
-// math.test.js
-const math = require("./math");
+function add(a, b) {
+  return a + b;
+}
 
-jest.mock("./math", () => ({
-  add: jest.fn(),
-}));
+describe("add function mocking", () => {
+  it("add function should be called with correct arguments", () => {
+    // Spy on the add function
+    spyOn(window, "add").and.callThrough();
 
-test("add function should be called with correct arguments", () => {
-  math.add.mockImplementation((a, b) => a + b);
+    // Call the add function
+    const result = add(1, 2);
 
-  const result = math.add(1, 2);
-
-  expect(result).toBe(3);
-  expect(math.add).toHaveBeenCalledWith(1, 2);
+    // Assertions
+    expect(result).toBe(3);
+    expect(window.add).toHaveBeenCalledWith(1, 2);
+  });
 });
-
